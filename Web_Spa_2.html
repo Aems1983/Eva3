@@ -49,6 +49,27 @@
   #seccion-libre.hidden {
     display: none;
   }
+/*Estilo Seccion Home*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .grid-item_3 img {
+    width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto original */
+    max-width: 100%; /* Establece un ancho máximo para las imágenes */
+    max-height: 200px; /* Establece una altura máxima para las imágenes */
+    object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    border: 2px solid black; /* Agrega un borde de 2px sólido en color negro */
+  }
+  /* Estilos adicionales para hacer que el grid sea más armonioso */
+  .grid-item_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
 /*Estilo Seccion Quienes Somos*/
   #quienes-somos.grid-container_1 {
     display: grid;
@@ -254,7 +275,7 @@
     left: 0;
     }
 }
-  /* Estilos para pantallas de hasta 600px de ancho */
+/* Estilos para pantallas de hasta 600px de ancho */
   @media (max-width: 600px) {
   /* Ajustar el tamaño de las fuentes */
     body {
@@ -303,7 +324,7 @@
         <li><a href="#historia">Historia</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="#otras">Curiosidades</a></li>
-        <li><a href="#seccion-libre">Seccion Libre</a></li>
+        <li><a href="#seccion-libre">Cuidados</a></li>
       </ul>
     </nav>
 </header>
@@ -314,7 +335,15 @@
     <p>En este sitio encontrarás toda la información que necesitas sobre 
     la raza de perro Dachshund, también conocido como perro salchicha."</p>
   <button onclick="document.querySelector('header').style.backgroundColor = 'black'">Cambiar color de fondo encabezado</button>
-  
+  <br><br>
+    <div class="grid-container">
+      <div class="grid-item_">
+        <img src="Imágenes/Home_3.jpg" alt="Home_2">
+      </div>
+      <div class="grid-item__">
+        <img src="Imágenes/Home_4.jpg" alt="Home_4">
+      </div>
+    </div>
   </section>
 
   <section id="quienes-somos" class="hidden grid-container_1">
@@ -327,7 +356,7 @@
         <button onclick="document.getElementById('quienes-somos').classList.toggle('hidden')">Mostrar/Ocultar Quienes Somos</button>
       </div>
       <div class="grid-item_1">
-        <img src="Imágenes/249107675_10226311673600317_3419109721667169780_n.jpg" alt="Perro salchicha"><br>
+        <img src="Imágenes/quienes_somos.jpg" alt="Perro salchicha"><br>
         <button id="cambiar-color_1">Cambiar Color Otra Seccion</button>
       </div>
   </section>
@@ -427,7 +456,8 @@
     <h2>Curiosidades</h2>
     <p>En esta sección encontraras las principales características de la raza, también puedes agregar
     cualquier información adicional que quieras incluir en tu sitio web sobre la raza de perro Dachshund.</p>
-
+    <button onclick="document.querySelector('footer').style.color = 'blue'">Cambiar color de texto en el pie de página</button>
+    <br>
     <table>
       <thead>
         <tr>
@@ -477,8 +507,9 @@
             <td>A pesar de su tamaño pequeño, los Dachshunds son capaces de adaptarse a diferentes situaciones y estilos de vida.</td>
           </tr>
         </tbody>
+        
       </table>
-    <button onclick="document.querySelector('footer').style.color = 'blue'">Cambiar color de texto en el pie de página</button>
+    
   </section>
 
   <section id="seccion-libre" class="hidden grid-container">
@@ -512,7 +543,7 @@
       cuidar de que no salten de altura ni que sean expuestos a constantes ires y venires por 
       escaleras de peldaños muy altos.</p>
       <img src="Imágenes/GettyImages-612733208-e1523025017244-768x418.jpg" alt="perro salchicha_3"><br>
-      <button id="cambiar-color">Cambiar Color</button>
+      <button id="cambiar-color">Cambiar Color de Fondo</button>
 
     </div>
     
